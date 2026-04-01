@@ -1,5 +1,22 @@
-build/
-vcpkg/
-.vscode/
+# Build folder
+/build/
+/out/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Visual Studio
+*.sln
+*.vcxproj*
+.vs/
+
+# vcpkg
+vcpkg_installed/
+
+# Executables
 *.exe
 *.dll
+*.obj

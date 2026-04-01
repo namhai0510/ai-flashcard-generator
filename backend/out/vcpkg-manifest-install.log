@@ -1,0 +1,71 @@
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/cl.exe
+The following packages will be built and installed:
+  * asio:x64-windows@1.32.0
+    cpr[core,ssl]:x64-windows@1.14.2
+    crow:x64-windows@1.3.0#1
+  * curl[core,non-http,ssl,sspi]:x64-windows@8.19.0
+    nlohmann-json:x64-windows@3.12.0#2
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+  * zlib:x64-windows@1.3.1
+Additional packages (*) will be modified to complete this operation.
+Restored 8 package(s) from C:\Users\HAIPQN\AppData\Local\vcpkg\archives in 7.9 s. Use --debug to see more details.
+Installing 1/8 vcpkg-cmake:x64-windows@2024-04-23...
+vcpkg-cmake:x64-windows@2024-04-23 package ABI: 530ccbb4ba00a171efce2fc75dc3d0bee292bd5d24ace16f5edd3f3820f2d05f
+Elapsed time to handle vcpkg-cmake:x64-windows: 14.9 ms
+Installing 2/8 zlib:x64-windows@1.3.1...
+zlib:x64-windows@1.3.1 package ABI: 17ce2a52fbc4c9b852ae1a5437fbf0f2c9d86b011e074248ad471d88ef9e0ec4
+Elapsed time to handle zlib:x64-windows: 60 ms
+Installing 3/8 vcpkg-cmake-config:x64-windows@2024-05-23...
+vcpkg-cmake-config:x64-windows@2024-05-23 package ABI: 1d8cd2191b7d01d5f3a74c661d4979f64975f0b7e9653553efae19cf461375dc
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 31.9 ms
+Installing 4/8 curl[core,non-http,ssl,sspi]:x64-windows@8.19.0...
+curl[core,non-http,ssl,sspi]:x64-windows@8.19.0 package ABI: f42eec10f515dae16d0b76c8fae937f86da05cea1b60f75cf0068363d80c0fdf
+Elapsed time to handle curl:x64-windows: 96.6 ms
+Installing 5/8 cpr[core,ssl]:x64-windows@1.14.2...
+cpr[core,ssl]:x64-windows@1.14.2 package ABI: 910f6cd2699aaebc657fc9e469c6c2dea553409584becd49b092d9fe4393aeb4
+Elapsed time to handle cpr:x64-windows: 115 ms
+Installing 6/8 asio:x64-windows@1.32.0...
+asio:x64-windows@1.32.0 package ABI: 5a6a8052031e57d9ceb1289c97823e3b70a4f000261c53a3ec31d6e1d1447976
+Elapsed time to handle asio:x64-windows: 659 ms
+Installing 7/8 crow:x64-windows@1.3.0#1...
+crow:x64-windows@1.3.0#1 package ABI: a1384b7cedfd0ccbae476600737dcc9afe3fef82cfe44cd5945083281ed90968
+Elapsed time to handle crow:x64-windows: 84.4 ms
+Installing 8/8 nlohmann-json:x64-windows@3.12.0#2...
+nlohmann-json:x64-windows@3.12.0#2 package ABI: 00158f40c795cfb74d2cc56f0a274029dd209fb1e174f0ca6287772dc26cdff0
+Elapsed time to handle nlohmann-json:x64-windows: 101 ms
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Packages installed in this vcpkg installation declare the following licenses:
+BSD-3-Clause
+BSL-1.0
+ISC
+MIT
+Zlib
+curl
+cpr provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(cpr CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE cpr::cpr)
+
+crow provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(Crow CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE Crow::Crow asio::asio)
+
+The package nlohmann-json provides CMake targets:
+
+    find_package(nlohmann_json CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE nlohmann_json::nlohmann_json)
+
+The package nlohmann-json can be configured to not provide implicit conversions via a custom triplet file:
+
+    set(nlohmann-json_IMPLICIT_CONVERSIONS OFF)
+
+For more information, see the docs here:
+    
+    https://json.nlohmann.me/api/macros/json_use_implicit_conversions/
+
+All requested installations completed successfully in: 1.2 s

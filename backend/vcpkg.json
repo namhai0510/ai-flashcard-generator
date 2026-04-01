@@ -1,0 +1,12 @@
+{
+  "name": "ai-flashcard",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "crow",
+    "cpr",
+    "nlohmann-json",
+    "boost-system",
+    "boost-date-time",
+    "boost-asio"
+  ]
+}

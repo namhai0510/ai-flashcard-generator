@@ -1,0 +1,12 @@
+{
+    "cmake.sourceDirectory": "D:/ai-flashcard-generator/backend",
+    "cmake.configureSettings": {
+    "CMAKE_MAKE_PROGRAM": "C:/ProgramData/mingw64/mingw64/bin/mingw32-make.exe",
+    "CMAKE_SH": "CMAKE_SH-NOTFOUND",
+    "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic",
+    "CMAKE_TOOLCHAIN_FILE": "D:/ai-flashcard-generator/backend/vcpkg/scripts/buildsystems/vcpkg.cmake",
+    },
+    "cmake.generator": "MinGW Makefiles",
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    
+}
