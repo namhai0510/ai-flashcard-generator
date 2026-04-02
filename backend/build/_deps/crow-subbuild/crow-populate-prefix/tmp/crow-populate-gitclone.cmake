@@ -52,13 +52,13 @@ endif()
 
 execute_process(
   COMMAND "C:/Program Files/Git/cmd/git.exe"
-          checkout "master" --
+          checkout "v1.1" --
   WORKING_DIRECTORY "D:/ai-flashcard-generator/backend/build/_deps/crow-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to checkout tag: 'master'")
+  message(FATAL_ERROR "Failed to checkout tag: 'v1.1'")
 endif()
 
 set(init_submodules TRUE)

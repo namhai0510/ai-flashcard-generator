@@ -8,6 +8,10 @@ add_definitions(-D_WIN32_WINNT=0x0601)
 
 include(FetchContent)
 
+set(CROW_USE_BOOST OFF CACHE BOOL "" FORCE)
+set(ASIO_STANDALONE ON CACHE BOOL "" FORCE)
+add_definitions(-DASIO_STANDALONE)
+
 FetchContent_Declare(
   crow
   GIT_REPOSITORY https://github.com/CrowCpp/Crow.git
@@ -29,5 +33,9 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 if(WIN32)
-  target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32)
+  target_link_libraries(${PROJECT_NAME}
+    PRIVATE
+    ws2_32
+    mswsock
+  )
 endif()

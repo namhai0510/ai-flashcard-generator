@@ -7,6 +7,7 @@
     "nlohmann-json",
     "boost-system",
     "boost-date-time",
-    "boost-asio"
+    "boost-asio",
+    "asio"
   ]
 }

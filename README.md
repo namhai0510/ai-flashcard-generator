@@ -1,1 +1,1 @@
-AI Flashcard Generator
+# ai-flashcard-generator
