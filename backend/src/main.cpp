@@ -1,29 +1,28 @@
 #include "crow.h"
 #include "crow/middlewares/cors.h"
-#include <iostream>
-
+#include "controllers/FlashcardController.h"
 
 int main() {
-    // Khởi tạo app với Middleware CORS
     crow::App<crow::CORSHandler> app;
 
-    // Cấu hình CORS cho phép Frontend gọi vào
     auto& cors = app.get_middleware<crow::CORSHandler>();
-    cors
-      .global()
-        .origin("http://localhost:5173") // Cổng của Frontend bạn đang chạy
-        .methods("POST"_method, "GET"_method)
+    cors.global()
+        .origin("http://localhost:5173")
+        .methods("POST"_method, "GET"_method, "OPTIONS"_method)
+        .headers("Content-Type", "Authorization")
         .allow_credentials();
 
-    CROW_ROUTE(app, "/")([](){
-        return "AI FLASHCARD Backend is Ready!";
+    // Route gọi controller
+    CROW_ROUTE(app, "/generate").methods("POST"_method)
+    ([](const crow::request& req) {
+        return generateFlashcards(req);
     });
 
-    // Route trả về dữ liệu giả cho Frontend
-    CROW_ROUTE(app, "/generate").methods("POST"_method)([](const crow::request& req){
-        return crow::response(R"([{"term": "AI", "definition": "Tri tue nhan tao"}, {"term": "Backend", "definition": "Hau dai cua he thong"}])");
+    CROW_ROUTE(app, "/ping")([](){
+        crow::json::wvalue res;
+        res["message"] = "pong";
+        return crow::response(res);
     });
 
-    // Chạy ở cổng 8080 như log của bạn
     app.port(8080).multithreaded().run();
 }

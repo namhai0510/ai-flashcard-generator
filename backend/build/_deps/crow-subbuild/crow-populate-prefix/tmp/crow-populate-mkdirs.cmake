@@ -18,7 +18,7 @@ file(MAKE_DIRECTORY
   "D:/ai-flashcard-generator/backend/build/_deps/crow-subbuild/crow-populate-prefix/src/crow-populate-stamp"
 )
 
-set(configSubDirs Debug)
+set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
     file(MAKE_DIRECTORY "D:/ai-flashcard-generator/backend/build/_deps/crow-subbuild/crow-populate-prefix/src/crow-populate-stamp/${subDir}")
 endforeach()

@@ -6,11 +6,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_definitions(-D_WIN32_WINNT=0x0601)
 
+set(CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg_installed/x64-windows" ${CMAKE_PREFIX_PATH})
+
 include(FetchContent)
 
 set(CROW_USE_BOOST OFF CACHE BOOL "" FORCE)
 set(ASIO_STANDALONE ON CACHE BOOL "" FORCE)
 add_definitions(-DASIO_STANDALONE)
+
+set(CROW_USE_ASIO ON CACHE BOOL "" FORCE)
 
 FetchContent_Declare(
   crow
