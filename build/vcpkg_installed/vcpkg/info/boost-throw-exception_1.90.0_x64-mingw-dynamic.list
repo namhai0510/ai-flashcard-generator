@@ -1,0 +1,15 @@
+x64-mingw-dynamic/
+x64-mingw-dynamic/include/
+x64-mingw-dynamic/include/boost/
+x64-mingw-dynamic/include/boost/exception/
+x64-mingw-dynamic/include/boost/exception/exception.hpp
+x64-mingw-dynamic/include/boost/throw_exception.hpp
+x64-mingw-dynamic/share/
+x64-mingw-dynamic/share/boost-throw-exception/
+x64-mingw-dynamic/share/boost-throw-exception/copyright
+x64-mingw-dynamic/share/boost-throw-exception/vcpkg.spdx.json
+x64-mingw-dynamic/share/boost-throw-exception/vcpkg_abi_info.txt
+x64-mingw-dynamic/share/boost_throw_exception/
+x64-mingw-dynamic/share/boost_throw_exception/boost_throw_exception-config-version.cmake
+x64-mingw-dynamic/share/boost_throw_exception/boost_throw_exception-config.cmake
+x64-mingw-dynamic/share/boost_throw_exception/boost_throw_exception-targets.cmake

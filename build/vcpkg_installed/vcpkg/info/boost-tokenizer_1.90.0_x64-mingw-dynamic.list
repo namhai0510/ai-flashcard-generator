@@ -1,0 +1,15 @@
+x64-mingw-dynamic/
+x64-mingw-dynamic/include/
+x64-mingw-dynamic/include/boost/
+x64-mingw-dynamic/include/boost/token_functions.hpp
+x64-mingw-dynamic/include/boost/token_iterator.hpp
+x64-mingw-dynamic/include/boost/tokenizer.hpp
+x64-mingw-dynamic/share/
+x64-mingw-dynamic/share/boost-tokenizer/
+x64-mingw-dynamic/share/boost-tokenizer/copyright
+x64-mingw-dynamic/share/boost-tokenizer/vcpkg.spdx.json
+x64-mingw-dynamic/share/boost-tokenizer/vcpkg_abi_info.txt
+x64-mingw-dynamic/share/boost_tokenizer/
+x64-mingw-dynamic/share/boost_tokenizer/boost_tokenizer-config-version.cmake
+x64-mingw-dynamic/share/boost_tokenizer/boost_tokenizer-config.cmake
+x64-mingw-dynamic/share/boost_tokenizer/boost_tokenizer-targets.cmake

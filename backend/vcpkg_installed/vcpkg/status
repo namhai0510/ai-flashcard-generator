@@ -1,0 +1,827 @@
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fa6bd51dd536fe8aabf98137f377658eb04d847e4ffaa0b05be057bd627fbc01
+Status: install ok installed
+
+Package: zlib
+Version: 1.3.1
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 46b8598dfd660b48d42dfdb96a6d72b1b11091520196a406b5c93fddac958170
+Description: A compression library
+Status: install ok installed
+
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 302348ac9ca499b2c7efe21255fec8880701ea9c379b6edc68eeaf22bd44fe41
+Status: install ok installed
+
+Package: curl
+Version: 8.19.0
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4165e7b1450136517fc21c24328cc2cd1a210faaf1d0a437d5bc348a812eb8eb
+Description: A library for transferring data with URLs
+Default-Features: non-http, ssl
+Status: install ok installed
+
+Package: curl
+Feature: non-http
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enables protocols beyond HTTP/HTTPS/HTTP2/HTTP3
+Status: install ok installed
+
+Package: curl
+Feature: ssl
+Architecture: x64-windows
+Multi-Arch: same
+Description: Default SSL / TLS implementation.
+Status: install ok installed
+
+Package: curl
+Feature: sspi
+Architecture: x64-windows
+Multi-Arch: same
+Description: SSPI support
+Status: install ok installed
+
+Package: cpr
+Version: 1.14.2
+Depends: curl, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2e9d0346131ea33841fdb7a743cc3adaf61021eb658d5008a8b9793a42e3d1b6
+Description: C++ Requests is a simple wrapper around libcurl inspired by the excellent Python Requests project.
+Default-Features: ssl
+Status: install ok installed
+
+Package: cpr
+Feature: ssl
+Depends: curl
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable SSL support
+Status: install ok installed
+
+Package: asio
+Version: 1.32.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b4de194f3d326581c0b06e96a211b122ab337a67b35d515174be4e191c8a6dbf
+Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
+Status: install ok installed
+
+Package: crow
+Version: 1.3.0
+Port-Version: 1
+Depends: asio, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 070d9dbf9c750abf76d8a0b6bf2d03b7192876a3de2f15b72b57bec453f3cf0b
+Description: Very fast and easy to use C++ micro web framework
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.12.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ca81c699e09e899b6b7ec9e3888848b8d07a826b525dd8beef77baf30ba11fa0
+Description: JSON for Modern C++
+Status: install ok installed
+
+Package: liblzma
+Version: 5.8.2
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: da1f36c34e5c07f83e8d563184ecd2396e08a4d407e47c4d9e008c37d72b0f1c
+Description: Compression library with an API similar to that of zlib.
+Status: purge ok not-installed
+
+Package: libjpeg-turbo
+Version: 3.1.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d37d89d130e5a48622eff0f160092a1d0b124d3368513e363bb6f4ccfc84ec38
+Description: libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.
+Status: purge ok not-installed
+
+Package: tiff
+Version: 4.7.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 9dd89522b5f74e133bda066b41c859e12fc65ddcb4a3f51766744f7c7b535e59
+Description: A library that supports the manipulation of TIFF image files
+Default-Features: jpeg, lzma, zip
+Status: purge ok not-installed
+
+Package: tiff
+Feature: jpeg
+Depends: libjpeg-turbo
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support JPEG compression in TIFF image files
+Status: purge ok not-installed
+
+Package: tiff
+Feature: lzma
+Depends: liblzma
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support LZMA compression in TIFF image files
+Status: purge ok not-installed
+
+Package: tiff
+Feature: zip
+Depends: zlib
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support ZIP/deflate compression in TIFF image files
+Status: purge ok not-installed
+
+Package: openjpeg
+Version: 2.5.4
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 7d224943d0d3f8a897992fb39e80a56b92e11959d011a46ff3ccc4d16f4f0da4
+Description: OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been developed in order to promote the use of JPEG 2000, a still-image compression standard from the Joint Photographic Experts Group (JPEG). Since April 2015, it is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.
+Status: purge ok not-installed
+
+Package: libpng
+Version: 1.6.55
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: caa75b3a37522fddd01b88affc907c73286648f993a461023c6c6566221494ec
+Description: libpng is a library implementing an interface for reading and writing PNG (Portable Network Graphics) format files
+Status: purge ok not-installed
+
+Package: libiconv
+Version: 1.18
+Port-Version: 3
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 64df9ca1270a24df08a591c378e8fe0b3118d55f4cea2bc92ae6452484ee44fc
+Description: iconv() text conversion.
+    This port installs GNU libiconv if the system C runtime doesn't provide a suitable iconv() implementation.
+Status: purge ok not-installed
+
+Package: bzip2
+Version: 1.0.8
+Port-Version: 6
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d4b9b3abc730a6f5dc013e456649254b4ddd4928859108a7983b0037f12c1400
+Description: bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.
+Default-Features: tool
+Status: purge ok not-installed
+
+Package: bzip2
+Feature: tool
+Architecture: x64-windows
+Multi-Arch: same
+Description: Builds bzip2 executable
+Status: purge ok not-installed
+
+Package: brotli
+Version: 1.2.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c5aa500388452953b31930ec944840401ba96148703d9732e39a8646159f94bc
+Description: a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling.
+Status: purge ok not-installed
+
+Package: freetype
+Version: 2.13.3
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 92bbf4e71df291ff177bcaa156cb9012dbaa35a7bf40ae40f0f7942e595b96a7
+Description: A library to render fonts.
+Default-Features: brotli, bzip2, png, zlib
+Status: purge ok not-installed
+
+Package: freetype
+Feature: brotli
+Depends: brotli
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support decompression of WOFF2 streams
+Status: purge ok not-installed
+
+Package: freetype
+Feature: bzip2
+Depends: bzip2
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support bzip2 compressed fonts.
+Status: purge ok not-installed
+
+Package: freetype
+Feature: png
+Depends: libpng
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support PNG compressed OpenType embedded bitmaps.
+Status: purge ok not-installed
+
+Package: freetype
+Feature: zlib
+Depends: zlib
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use zlib instead of internal library for DEFLATE
+Status: purge ok not-installed
+
+Package: vcpkg-boost
+Version: 2025-03-29
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e2a496040a4bc61e8af28b11115d8f75acdf3ad8a788e1022fc9bb4d338fbf07
+Status: install ok installed
+
+Package: boost-uninstall
+Version: 1.90.0
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8cb2952f7209e13e2e50b24dbef71f8f66630a696f7dbfa290dff4a0e8ec867a
+Description: Internal vcpkg port used to uninstall Boost
+Status: install ok installed
+
+Package: boost-cmake
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-uninstall, vcpkg-boost
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e4053a12251c9c80042f0b347a899322ffd1ff6fcf60fd281d782ecb458043f5
+Description: Boost cmake module
+Status: install ok installed
+
+Package: boost-headers
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a710558423adb8799d9dff2f6726199867b3b67b6d257e3d3ea2656eb5084faa
+Description: Boost headers module
+Status: install ok installed
+
+Package: boost-config
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d1deb907b60ba33f001049fb056760d8167a613149a1674a66c09ac58c5939e9
+Description: Boost config module
+Status: install ok installed
+
+Package: boost-move
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 726ecf87a7471dfa0e18557ed5c1fb6f8e34676234939b7164bf464ce70ad655
+Description: Boost move module
+Status: install ok installed
+
+Package: boost-assert
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f5077aa11984652606293a1792d4775a035a55750791f4ccbef5bd08e3094e6e
+Description: Boost assert module
+Status: install ok installed
+
+Package: boost-intrusive
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-move
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 00a76380dd971deb8ebcc55addea0b469ab8516d2c4c2ecbc63ae1d1eccde55d
+Description: Boost intrusive module
+Status: install ok installed
+
+Package: boost-container
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-intrusive, boost-move
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2d283026ed16185db54109a981c7bb3d1214a0e955b9f898e9568d44f2d184ec
+Description: Boost container module
+Status: install ok installed
+
+Package: poppler
+Version: 25.7.0
+Depends: boost-container, freetype, libiconv, libjpeg-turbo, libpng, openjpeg, tiff, vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6415907c5f70aefabf8400130d6915cffaf7d568ef4cfc8e09daa30920ce5d11
+Description: A PDF rendering library
+Default-Features: font-configuration, zlib
+Status: purge ok not-installed
+
+Package: poppler
+Feature: font-configuration
+Architecture: x64-windows
+Multi-Arch: same
+Description: Defaut font configuration backend
+Status: purge ok not-installed
+
+Package: poppler
+Feature: zlib
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use zlib to uncompress flate streams (not totally safe).
+Status: purge ok not-installed
+
+Package: boost-throw-exception
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0f505b1155ea07a3f46959e13e7d11351bbb6532e57a90cdebed31d7bae81b25
+Description: Boost throw_exception module
+Status: install ok installed
+
+Package: boost-core
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: ec8fb429d4ee3b377f52c644aba8a1f873cfbfa7c7e37a8bea91641bcc0a1814
+Description: Boost core module
+Status: install ok installed
+
+Package: boost-smart-ptr
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2405e089f0928a252e95556bdc2af935fb51cdd85286e5f6d4748187fdd4c3e1
+Description: Boost smart_ptr module
+Status: install ok installed
+
+Package: boost-predef
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6f025ce799c5a14e26572bdb55548ab39e198ba2052aae45ab6b9f3df398a0b1
+Description: Boost predef module
+Status: install ok installed
+
+Package: boost-winapi
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers, boost-predef
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4996bcbf4c2a5ca1549b2ab705f1dcfce98d7f0cb1f93073eeda3220ca529985
+Description: Boost winapi module
+Status: install ok installed
+
+Package: boost-static-assert
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5a4ccdd34d1bab6ecc347fe911a95dded88a06f67a0bfb8ac93a32bd28ea1b58
+Description: Boost static_assert module
+Status: install ok installed
+
+Package: boost-type-traits
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers, boost-static-assert
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0c227a93a3f5592513859e13d4a61d099161b98a851a211c2bae7ec99fea91ec
+Description: Boost type_traits module
+Status: install ok installed
+
+Package: boost-integer
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-static-assert, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d6635cac24f67e4085a578412f34afa0923a41075a6f2beb71a76103878b1dca
+Description: Boost integer module
+Status: install ok installed
+
+Package: boost-pool
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-integer, boost-throw-exception, boost-type-traits, boost-winapi
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d356430dc6f5eeef7e85b24a95b23a194f9fffe4f037dc634f3b3828ab7e56be
+Description: Boost pool module
+Status: install ok installed
+
+Package: boost-mp11
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 54d4f0de1784e8833792b290c98d1cda0051ceb5a17169f0e717e62ddcb27772
+Description: Boost mp11 module
+Status: install ok installed
+
+Package: boost-context
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-mp11, boost-pool, boost-predef, boost-smart-ptr
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 49e0cabb1a8d6f619d30f57422d3c9ffd78b85cd0dff2cb190905ce3c6dae843
+Description: Boost context module
+Status: install ok installed
+
+Package: boost-preprocessor
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e94167b59329c473351ccfad5a4d5c022c3c2425bd5596381492622e6c5788fe
+Description: Boost preprocessor module
+Status: install ok installed
+
+Package: boost-io
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3a9d4e8137c4740a93430a0b0fb72010cb5e12157a80167df43270b5aff5357a
+Description: Boost io module
+Status: install ok installed
+
+Package: boost-utility
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-io, boost-preprocessor, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 6feb57d4ea90d22d0625d4ae612887469283fbbc10bfc730f9502a2cd5d84c60
+Description: Boost utility module
+Status: install ok installed
+
+Package: boost-optional
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8dfd22397f2c2ca391deadc707f0c8ba19181f07f72ac2bbbf5a87524568a0bc
+Description: Boost optional module
+Status: install ok installed
+
+Package: boost-mpl
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-headers, boost-predef, boost-preprocessor, boost-static-assert, boost-type-traits, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 58be3c6c1107ec321e89ebffd5e5d663bf5347d1be670f332e83c0902a15c533
+Description: Boost mpl module
+Status: install ok installed
+
+Package: boost-typeof
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 12c241e8f8348e50fa5f8576c119f9ff0e4a2359263bbbb42be1608d911d26b6
+Description: Boost typeof module
+Status: install ok installed
+
+Package: boost-tuple
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-headers, boost-static-assert, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: edeb44f96530229f8cb65712dfb51de206ad824279ba2197336c72e1df80fbb7
+Description: Boost tuple module
+Status: install ok installed
+
+Package: boost-detail
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-headers, boost-preprocessor, boost-static-assert, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 71f40511700973a684b1d9f8e4e0c5abee8bd5c67016d25336d725009c88186b
+Description: Boost detail module
+Status: install ok installed
+
+Package: boost-function-types
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-detail, boost-headers, boost-mpl, boost-preprocessor, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: bb4b84dbf54c014164727e7b7bca57caef8dd83dd76a8b6d789b5f407284e351
+Description: Boost function_types module
+Status: install ok installed
+
+Package: boost-bind
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-headers
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fde61c4be1db92acdb5be4905666e1dd596d5af40958f5771381b358de6a0e49
+Description: Boost bind module
+Status: install ok installed
+
+Package: boost-function
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-bind, boost-cmake, boost-config, boost-core, boost-headers, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a7ba3a300973f902812532b33d0b994da7b9bd1ed879553ba34e20c0ff743ff1
+Description: Boost function module
+Status: install ok installed
+
+Package: boost-functional
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-core, boost-function, boost-function-types, boost-headers, boost-mpl, boost-preprocessor, boost-type-traits, boost-typeof, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b4527090ca307f19c3f97699c55a7db632f53f3f7c114b34cbc37f5ad6cdbf67
+Description: Boost functional module
+Status: install ok installed
+
+Package: boost-describe
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers, boost-mp11
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fd38206c654d687f5e251faf8d8799bfa1c863798b10efacc3152e1b81b6f677
+Description: Boost describe module
+Status: install ok installed
+
+Package: boost-container-hash
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-describe, boost-headers, boost-mp11
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5aeffc89ebf3fee8096eebb810e7b7548332146778f9f48ea504385384bbdbda
+Description: Boost container_hash module
+Status: install ok installed
+
+Package: boost-fusion
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-container-hash, boost-core, boost-function-types, boost-functional, boost-headers, boost-mpl, boost-preprocessor, boost-static-assert, boost-tuple, boost-type-traits, boost-typeof, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b78ff4c342783c940ad7ad019044df5501a1c2705c1bc7144b25ca9f06d72953
+Description: Boost fusion module
+Status: install ok installed
+
+Package: boost-concept-check
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-headers, boost-preprocessor, boost-static-assert, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c130b66cb7f83a1f6aad12a5052e49989fe4b115511b309d86c66e54ee1c323c
+Description: Boost concept_check module
+Status: install ok installed
+
+Package: boost-iterator
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-concept-check, boost-config, boost-core, boost-detail, boost-fusion, boost-headers, boost-mp11, boost-mpl, boost-optional, boost-type-traits, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 12e38f19ed4562ae1a198f01981fcdd5132f0a470adce348cf977eda3138d6c9
+Description: Boost iterator module
+Status: install ok installed
+
+Package: boost-tokenizer
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-iterator, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: bfe5a9d8536f81a33443a43a10c90a206d3269eacbc49e4927c79d8a2373e580
+Description: Boost tokenizer module
+Status: install ok installed
+
+Package: boost-regex
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-concept-check, boost-config, boost-core, boost-headers, boost-predef, boost-static-assert, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b3a1731f3d67de03e7cb8039835f08b850d1c85c7bd22f3cf3feb74aad469b4b
+Description: Boost regex module
+Status: install ok installed
+
+Package: boost-conversion
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-smart-ptr, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: aeadd23cb498e03ba3e724de5d19aa3334d9359d6c6ff67d6ed53dbf6a9255ca
+Description: Boost conversion module
+Status: install ok installed
+
+Package: boost-array
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-static-assert, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 244f4d4510d6aa190193a7cd9b79ff7c8a2f2944c680f83b551017776d74caaf
+Description: Boost array module
+Status: install ok installed
+
+Package: boost-range
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-array, boost-assert, boost-cmake, boost-concept-check, boost-config, boost-container-hash, boost-conversion, boost-core, boost-detail, boost-headers, boost-iterator, boost-mpl, boost-optional, boost-preprocessor, boost-regex, boost-static-assert, boost-tuple, boost-type-traits, boost-utility
+Architecture: x64-windows
+Multi-Arch: same
+Abi: fb31756491e0f2b3fe7dc3e2506498a3407d5626fff24aa79e300b628c01372f
+Description: Boost range module
+Status: install ok installed
+
+Package: boost-numeric-conversion
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-conversion, boost-core, boost-headers, boost-mpl, boost-preprocessor, boost-throw-exception, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 394d9f578ed853131cfa0f23521aac755f7d740e6a784dc481d7eda92d8a6583
+Description: Boost numeric_conversion module
+Status: install ok installed
+
+Package: boost-lexical-cast
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-cmake, boost-config, boost-container, boost-core, boost-headers, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 32df0a5c0431b9cabfda4f4fb276b6f66914a86db7cdc0e83737dd5be8661236
+Description: Boost lexical_cast module
+Status: install ok installed
+
+Package: boost-unordered
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-container-hash, boost-core, boost-headers, boost-mp11, boost-predef, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1b90d78350d66e38395b0843a1acf944ccd516f04f0a6e1b9e64f3d798c51d0f
+Description: Boost unordered module
+Status: install ok installed
+
+Package: boost-exception
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-smart-ptr, boost-throw-exception, boost-tuple, boost-type-traits
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 57dd8a1d8d25c19542d85f23ffef5f1b00b18b8286e024bcccabf6478ba89b5e
+Description: Boost exception module
+Status: install ok installed
+
+Package: boost-algorithm
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-array, boost-assert, boost-bind, boost-cmake, boost-concept-check, boost-config, boost-core, boost-exception, boost-function, boost-headers, boost-iterator, boost-mpl, boost-range, boost-regex, boost-static-assert, boost-throw-exception, boost-tuple, boost-type-traits, boost-unordered
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8295a5232ecb32ce8ce0121b802ed8488384f3cdefdcb8d8dbb462346ca96cc0
+Description: Boost algorithm module
+Status: install ok installed
+
+Package: boost-date-time
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-algorithm, boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-io, boost-lexical-cast, boost-numeric-conversion, boost-range, boost-smart-ptr, boost-static-assert, boost-throw-exception, boost-tokenizer, boost-type-traits, boost-utility, boost-winapi
+Architecture: x64-windows
+Multi-Arch: same
+Abi: aefbd373908bf1f4d4b3e817705121e3a68186850c50b807ee8c7fb732ffbd90
+Description: Boost date_time module
+Status: install ok installed
+
+Package: boost-variant2
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-mp11
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 991b53e0d6e70cecfedc4727c4b4c2ecf7a7dca24a320256e0574b2afe7069fc
+Description: Boost variant2 module
+Status: install ok installed
+
+Package: boost-system
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-headers, boost-throw-exception, boost-variant2, boost-winapi
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 42780544391d5fd3c437757d4b161c062a7746243323d0cb0ebcf733f66e7603
+Description: Boost system module
+Status: install ok installed
+
+Package: boost-align
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-assert, boost-cmake, boost-config, boost-core, boost-headers, boost-static-assert
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5537ea4d48000de4f6c3494f82e8d20af30e6b49a53df43ced3fc8d9b227457f
+Description: Boost align module
+Status: install ok installed
+
+Package: boost-asio
+Version: 1.90.0
+Port-Version: 1
+Depends: boost-align, boost-assert, boost-cmake, boost-config, boost-headers, boost-system, boost-throw-exception
+Architecture: x64-windows
+Multi-Arch: same
+Abi: e17a2c1697468e5b1e2bf4dea68b0c58d78bc63e1335c05bf35d70fb68476d4d
+Description: Boost asio module
+Default-Features: deadline-timer, spawn
+Status: install ok installed
+
+Package: boost-asio
+Feature: deadline-timer
+Depends: boost-date-time
+Architecture: x64-windows
+Multi-Arch: same
+Description: Build with deadline_timer support
+Status: install ok installed
+
+Package: boost-asio
+Feature: spawn
+Depends: boost-context
+Architecture: x64-windows
+Multi-Arch: same
+Description: Build with spawn (stackful coroutines) support
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2025-05-29
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 594ad31e89516cc5c849a96ab19f6954dc2da881d86a8e7922e9052aa72f750c
+Status: install ok installed
+
+Package: openssl
+Version: 3.6.1
+Port-Version: 3
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5e1b93ff8729c37aa2953333b0b6b63263a4782291c32a4549299e4a4843899c
+Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+

@@ -1,0 +1,1 @@
+ "vcpkg_installed/x64-mingw-dynamic/debug/lib/libcurl-d.dll.a" -lws2_32 -lmswsock -lcrypt32 -lwldap32 -lnormaliz -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

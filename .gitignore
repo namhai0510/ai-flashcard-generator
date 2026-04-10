@@ -1,22 +1,14 @@
-# Build folder
-/build/
-/out/
+# Build và Cache
+backend/build/
+.cache/
+bin/
+obj/
 
-# CMake
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
+# Logs và môi trường
+*.log
+*.txt
+backend/.env
 
-# Visual Studio
-*.sln
-*.vcxproj*
+# IDE rác
+.vscode/
 .vs/
-
-# vcpkg
-vcpkg_installed/
-
-# Executables
-*.exe
-*.dll
-*.obj

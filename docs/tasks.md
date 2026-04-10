@@ -68,7 +68,7 @@
 ## 🌐 Phase 7 – API (Crow)
 
 * [ ] 7.1 Init Server
-* [ ] 7.2 /ping endpoint
+* [ ] 7.2 /ping endpointa
 * [ ] 7.3 /content/upload
 * [ ] 7.4 /flashcards/generate
 * [ ] 7.5 /study/start

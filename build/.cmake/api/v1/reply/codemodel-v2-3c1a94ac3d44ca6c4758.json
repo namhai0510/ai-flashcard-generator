@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::ZLIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__ZLIB-Debug-c588b6428e04534a101e.json",
+					"name" : "CURL::ZLIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::libcurl_shared::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__libcurl_shared-Debug-a5e7541abae4537aca4f.json",
+					"name" : "CURL::libcurl_shared",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CURL::win32_winsock::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CURL__win32_winsock-Debug-0913136c0f485eab79c5.json",
+					"name" : "CURL::win32_winsock",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Crow::Crow::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Crow__Crow-Debug-1e6922082354ff37a0d4.json",
+					"name" : "Crow::Crow",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Threads::Threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Threads__Threads-Debug-d5e214eb589e0ef146f1.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZLIB::ZLIB::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZLIB__ZLIB-Debug-1182b9d7538be3c0f434.json",
+					"name" : "ZLIB::ZLIB",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "asio::asio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-asio__asio-Debug-7c0a2fc4d7a08ba45967.json",
+					"name" : "asio::asio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nlohmann_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nlohmann_json-Debug-73ef24c2fc3694a4207d.json",
+					"name" : "nlohmann_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "nlohmann_json::nlohmann_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-nlohmann_json__nlohmann_json-Debug-4bb283a6fef5ac0c46ce.json",
+					"name" : "nlohmann_json::nlohmann_json",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f040eec181a89de70dbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AI_Flashcard_Backend",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "AI_Flashcard_Backend::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-AI_Flashcard_Backend-Debug-173e5897b35d035b5d6c.json",
+					"name" : "AI_Flashcard_Backend",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/ai-flashcard-generator/build",
+		"source" : "D:/ai-flashcard-generator/backend"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

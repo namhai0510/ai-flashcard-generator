@@ -1,0 +1,26 @@
+[
+{
+  "directory": "D:/ai-flashcard-generator/build",
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe -DASIO_NO_DEPRECATED -D_WIN32_WINNT=0x0601 @CMakeFiles/AI_Flashcard_Backend.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AI_Flashcard_Backend.dir\\src\\main.cpp.obj -c D:\\ai-flashcard-generator\\backend\\src\\main.cpp",
+  "file": "D:/ai-flashcard-generator/backend/src/main.cpp",
+  "output": "CMakeFiles/AI_Flashcard_Backend.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/ai-flashcard-generator/build",
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe -DASIO_NO_DEPRECATED -D_WIN32_WINNT=0x0601 @CMakeFiles/AI_Flashcard_Backend.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AI_Flashcard_Backend.dir\\src\\controllers\\FlashcardController.cpp.obj -c D:\\ai-flashcard-generator\\backend\\src\\controllers\\FlashcardController.cpp",
+  "file": "D:/ai-flashcard-generator/backend/src/controllers/FlashcardController.cpp",
+  "output": "CMakeFiles/AI_Flashcard_Backend.dir/src/controllers/FlashcardController.cpp.obj"
+},
+{
+  "directory": "D:/ai-flashcard-generator/build",
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe -DASIO_NO_DEPRECATED -D_WIN32_WINNT=0x0601 @CMakeFiles/AI_Flashcard_Backend.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AI_Flashcard_Backend.dir\\src\\controllers\\StudyController.cpp.obj -c D:\\ai-flashcard-generator\\backend\\src\\controllers\\StudyController.cpp",
+  "file": "D:/ai-flashcard-generator/backend/src/controllers/StudyController.cpp",
+  "output": "CMakeFiles/AI_Flashcard_Backend.dir/src/controllers/StudyController.cpp.obj"
+},
+{
+  "directory": "D:/ai-flashcard-generator/build",
+  "command": "C:\\ProgramData\\mingw64\\mingw64\\bin\\g++.exe -DASIO_NO_DEPRECATED -D_WIN32_WINNT=0x0601 @CMakeFiles/AI_Flashcard_Backend.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\AI_Flashcard_Backend.dir\\src\\services\\AIService.cpp.obj -c D:\\ai-flashcard-generator\\backend\\src\\services\\AIService.cpp",
+  "file": "D:/ai-flashcard-generator/backend/src/services/AIService.cpp",
+  "output": "CMakeFiles/AI_Flashcard_Backend.dir/src/services/AIService.cpp.obj"
+}
+]

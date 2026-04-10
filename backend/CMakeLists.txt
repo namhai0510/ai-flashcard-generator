@@ -4,42 +4,52 @@ project(AI_Flashcard_Backend)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Hỗ trợ UTF-8 cho MSVC (nếu bạn đổi sang dùng Visual Studio sau này)
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
+
 add_definitions(-D_WIN32_WINNT=0x0601)
 
-set(CMAKE_PREFIX_PATH "${CMAKE_CURRENT_SOURCE_DIR}/vcpkg_installed/x64-windows" ${CMAKE_PREFIX_PATH})
-
-include(FetchContent)
-
-set(CROW_USE_BOOST OFF CACHE BOOL "" FORCE)
-set(ASIO_STANDALONE ON CACHE BOOL "" FORCE)
-add_definitions(-DASIO_STANDALONE)
-
-set(CROW_USE_ASIO ON CACHE BOOL "" FORCE)
-
-FetchContent_Declare(
-  crow
-  GIT_REPOSITORY https://github.com/CrowCpp/Crow.git
-  GIT_TAG v1.1
-)
-
-FetchContent_MakeAvailable(crow)
-
+# ==========================================
+# TÌM KIẾM CÁC GÓI ĐÃ CÓ TRONG VCPKG
+# ==========================================
+find_package(CURL REQUIRED)
+find_package(Crow CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
 find_package(Threads REQUIRED)
 
-file(GLOB_RECURSE SOURCES src/*.cpp)
+# ==========================================
+# CẤU HÌNH SOURCE CODE
+# ==========================================
+set(SOURCES
+    src/main.cpp
+    src/controllers/FlashcardController.cpp
+    src/controllers/StudyController.cpp
+    src/services/AIService.cpp
+)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 
+# ==========================================
+# LINKING
+# ==========================================
 target_link_libraries(${PROJECT_NAME}
-  PRIVATE
-  Crow::Crow
-  Threads::Threads
+    PRIVATE
+    Crow::Crow
+    nlohmann_json::nlohmann_json
+    Threads::Threads
+    CURL::libcurl
 )
 
+# Thêm các thư viện hệ thống cần thiết cho Networking trên Windows
 if(WIN32)
-  target_link_libraries(${PROJECT_NAME}
-    PRIVATE
-    ws2_32
-    mswsock
-  )
+    target_link_libraries(${PROJECT_NAME}
+        PRIVATE
+        ws2_32
+        mswsock
+        crypt32
+        wldap32
+        normaliz
+    )
 endif()

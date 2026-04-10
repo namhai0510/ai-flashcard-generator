@@ -1,0 +1,15 @@
+x64-mingw-dynamic/
+x64-mingw-dynamic/include/
+x64-mingw-dynamic/include/boost/
+x64-mingw-dynamic/include/boost/implicit_cast.hpp
+x64-mingw-dynamic/include/boost/polymorphic_cast.hpp
+x64-mingw-dynamic/include/boost/polymorphic_pointer_cast.hpp
+x64-mingw-dynamic/share/
+x64-mingw-dynamic/share/boost-conversion/
+x64-mingw-dynamic/share/boost-conversion/copyright
+x64-mingw-dynamic/share/boost-conversion/vcpkg.spdx.json
+x64-mingw-dynamic/share/boost-conversion/vcpkg_abi_info.txt
+x64-mingw-dynamic/share/boost_conversion/
+x64-mingw-dynamic/share/boost_conversion/boost_conversion-config-version.cmake
+x64-mingw-dynamic/share/boost_conversion/boost_conversion-config.cmake
+x64-mingw-dynamic/share/boost_conversion/boost_conversion-targets.cmake

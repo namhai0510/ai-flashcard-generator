@@ -1,0 +1,13 @@
+x64-mingw-dynamic/
+x64-mingw-dynamic/include/
+x64-mingw-dynamic/include/boost/
+x64-mingw-dynamic/include/boost/static_assert.hpp
+x64-mingw-dynamic/share/
+x64-mingw-dynamic/share/boost-static-assert/
+x64-mingw-dynamic/share/boost-static-assert/copyright
+x64-mingw-dynamic/share/boost-static-assert/vcpkg.spdx.json
+x64-mingw-dynamic/share/boost-static-assert/vcpkg_abi_info.txt
+x64-mingw-dynamic/share/boost_static_assert/
+x64-mingw-dynamic/share/boost_static_assert/boost_static_assert-config-version.cmake
+x64-mingw-dynamic/share/boost_static_assert/boost_static_assert-config.cmake
+x64-mingw-dynamic/share/boost_static_assert/boost_static_assert-targets.cmake

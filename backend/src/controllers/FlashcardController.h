@@ -1,5 +1,7 @@
 #pragma once
-
 #include "crow.h"
 
-crow::response generateFlashcards(const crow::request& req);
+class FlashcardController {
+public:
+    static crow::response generateFlashcards(const crow::request& req);
+};
