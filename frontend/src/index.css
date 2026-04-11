@@ -1,7 +1,17 @@
 @import "tailwindcss";
 
-/* Giữ lại màu nền Slate-50 cho AI FLASHCARD */
-body {
-  margin: 0;
-  background-color: #f8fafc;
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-gray-50 text-gray-900 transition-colors duration-300;
+  }
+  
+  /* Cấu trúc dark mode trong v4 thường dùng selector .dark */
+  .dark body {
+    @apply bg-slate-900 text-gray-100;
+  }
 }
