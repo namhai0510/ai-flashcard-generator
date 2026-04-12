@@ -87,6 +87,26 @@
 
 ---
 
+## 🔐 Full-stack Authentication (Phase 8.6)
+
+### Frontend (React)
+- [ ] Create an Auth layout with a modern, glassmorphism design.
+- [ ] Implement Login/Signup form toggle with smooth transitions.
+- [ ] Setup Axios interceptors to include JWT in header for authorized requests.
+
+### Backend (C++ Crow)
+- [ ] Implement User Schema in PostgreSQL (id, username, email, password_hash, created_at).
+- [ ] Setup password hashing logic using a secure library.
+- [ ] Create `/api/auth/signup` and `/api/auth/login` endpoints.
+- [ ] Implement JWT generation for successful logins.
+
+## 🤖 AI Mentor UI Integration (Phase 8.7)
+- [ ] Design/Source a robot mascot asset (leaning/peeking pose).
+- [ ] Position the mascot overlapping the right edge of the Session Result Modal.
+- [ ] Implement an animated Speech Bubble for proactive suggestions based on SM-2 data.
+
+---
+
 ## 🧪 Phase 9 – Testing
 
 * [ ] 9.1 Empty Input
@@ -94,3 +114,4 @@
 * [ ] 9.3 All Correct
 * [ ] 9.4 Large Input
 * [ ] 9.5 Timer Test
+
