@@ -76,13 +76,7 @@ After build:
 ### On Windows (MSVC)
 
 ```bash
-./Debug/AI_Flashcard_Backend.exe
-```
-
-or
-
-```bash
-./Release/AI_Flashcard_Backend.exe
+./AI_Flashcard_Backend.exe
 ```
 
 ---
