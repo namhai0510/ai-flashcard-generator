@@ -12,3 +12,5 @@ backend/.env
 # IDE rác
 .vscode/
 .vs/
+
+.env
